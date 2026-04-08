@@ -1,10 +1,6 @@
 import { useState } from 'react'
 import { useInView } from '../hooks/useInView'
 
-// ─── To connect to Formspree:  action="https://formspree.io/f/YOUR_ID"  ──────
-// ─── To connect to EmailJS:    call emailjs.send() in handleSubmit        ──────
-const FORM_ENDPOINT = '' // Leave empty for frontend-only demo
-
 const initialState = {
   name:       '',
   firma:      '',
@@ -51,24 +47,22 @@ export default function LeadForm() {
 
     setStatus('sending')
 
-    // ─── Connect to a real backend here ────────────────────────────────────
-    // Option A: Formspree
-    //   const res = await fetch(FORM_ENDPOINT, {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-    //     body: JSON.stringify(form),
-    //   })
-    //   setStatus(res.ok ? 'success' : 'error')
-    //
-    // Option B: EmailJS
-    //   await emailjs.send('SERVICE_ID', 'TEMPLATE_ID', form, 'PUBLIC_KEY')
-    //   setStatus('success')
-    // ─────────────────────────────────────────────────────────────────────────
-
-    // Demo: simulate network delay
-    await new Promise(r => setTimeout(r, 900))
-    setStatus('success')
-    setForm(initialState)
+    try {
+      const res = await fetch('/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      const json = await res.json()
+      if (json.ok) {
+        setStatus('success')
+        setForm(initialState)
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   // ─── Success state ─────────────────────────────────────────────────────────
@@ -160,8 +154,6 @@ export default function LeadForm() {
           <div className={`animate-on-enter-right ${inView ? 'in-view' : ''} delay-200`}>
             <form
               onSubmit={handleSubmit}
-              action={FORM_ENDPOINT || undefined}
-              method={FORM_ENDPOINT ? 'POST' : undefined}
               noValidate
               className="space-y-5"
             >
@@ -263,6 +255,16 @@ export default function LeadForm() {
                   </span>
                 ) : 'Anfrage senden'}
               </button>
+
+              {status === 'error' && (
+                <p className="text-red-400 text-sm font-condensed text-center">
+                  Beim Senden ist ein Fehler aufgetreten. Bitte versuch es erneut oder
+                  schreib uns direkt an{' '}
+                  <a href="mailto:boxzentrumkiel@web.de" className="underline">
+                    boxzentrumkiel@web.de
+                  </a>.
+                </p>
+              )}
 
               <p className="text-biker-steel/60 text-xs font-light text-center">
                 * Pflichtfelder. Deine Daten werden vertraulich behandelt.
