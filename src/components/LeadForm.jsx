@@ -85,8 +85,8 @@ export default function LeadForm() {
           </p>
           <p className="text-biker-steel text-sm font-light mb-8">
             Bei dringenden Fragen erreichst du uns unter:{' '}
-            <a href="mailto:boxzentrumkiel@web.de" className="text-biker-orange hover:underline">
-              boxzentrumkiel@web.de
+            <a href="mailto:info@kieler-bikerdays.de" className="text-biker-orange hover:underline">
+              info@kieler-bikerdays.de
             </a>
           </p>
           <button
@@ -136,7 +136,7 @@ export default function LeadForm() {
                 Direkt schreiben
               </div>
               <a
-                href="mailto:boxzentrumkiel@web.de"
+                href="mailto:info@kieler-bikerdays.de"
                 className="flex items-center gap-3 text-biker-chrome hover:text-biker-orange transition-colors duration-300 group"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4 flex-shrink-0 text-biker-orange">
@@ -144,7 +144,7 @@ export default function LeadForm() {
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
                 <span className="font-condensed font-semibold text-sm tracking-wider group-hover:underline">
-                  boxzentrumkiel@web.de
+                  info@kieler-bikerdays.de
                 </span>
               </a>
             </div>
@@ -260,8 +260,8 @@ export default function LeadForm() {
                 <p className="text-red-400 text-sm font-condensed text-center">
                   Beim Senden ist ein Fehler aufgetreten. Bitte versuch es erneut oder
                   schreib uns direkt an{' '}
-                  <a href="mailto:boxzentrumkiel@web.de" className="underline">
-                    boxzentrumkiel@web.de
+                  <a href="mailto:info@kieler-bikerdays.de" className="underline">
+                    info@kieler-bikerdays.de
                   </a>.
                 </p>
               )}

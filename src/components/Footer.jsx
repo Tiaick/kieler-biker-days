@@ -80,10 +80,10 @@ export default function Footer() {
               </div>
               <div className="mt-4">
                 <a
-                  href="mailto:boxzentrumkiel@web.de"
+                  href="mailto:info@kieler-bikerdays.de"
                   className="font-condensed text-biker-orange hover:text-biker-orange-glow transition-colors duration-200 text-sm tracking-wide"
                 >
-                  boxzentrumkiel@web.de
+                  info@kieler-bikerdays.de
                 </a>
               </div>
             </div>

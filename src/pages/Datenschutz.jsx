@@ -73,10 +73,10 @@ export default function Datenschutz() {
               <p className="mt-2">
                 E-Mail:{' '}
                 <a
-                  href="mailto:boxzentrumkiel@web.de"
+                  href="mailto:info@kieler-bikerdays.de"
                   className="text-biker-orange hover:underline"
                 >
-                  boxzentrumkiel@web.de
+                  info@kieler-bikerdays.de
                 </a>
               </p>
             </div>
@@ -209,10 +209,10 @@ export default function Datenschutz() {
             <p className="text-biker-steel mt-3">
               Für Anfragen wende dich an:{' '}
               <a
-                href="mailto:boxzentrumkiel@web.de"
+                href="mailto:info@kieler-bikerdays.de"
                 className="text-biker-orange hover:underline"
               >
-                boxzentrumkiel@web.de
+                info@kieler-bikerdays.de
               </a>
             </p>
           </section>

@@ -71,10 +71,10 @@ export default function Impressum() {
               <p>
                 <span className="text-biker-steel">E-Mail:</span>{' '}
                 <a
-                  href="mailto:boxzentrumkiel@web.de"
+                  href="mailto:info@kieler-bikerdays.de"
                   className="text-biker-orange hover:underline"
                 >
-                  boxzentrumkiel@web.de
+                  info@kieler-bikerdays.de
                 </a>
               </p>
             </div>

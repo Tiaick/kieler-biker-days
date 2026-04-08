@@ -39,7 +39,7 @@ export default function Contact() {
                 und ganz Schleswig-Holstein.
               </p>
               <a
-                href="mailto:boxzentrumkiel@web.de"
+                href="mailto:info@kieler-bikerdays.de"
                 className="flex items-center gap-3 group"
               >
                 <div className="w-10 h-10 border border-biker-orange/50 flex items-center justify-center text-biker-orange group-hover:bg-biker-orange group-hover:text-biker-black transition-all duration-300 flex-shrink-0">
@@ -49,7 +49,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <span className="font-condensed font-semibold text-biker-chrome group-hover:text-biker-orange transition-colors duration-300 tracking-wider">
-                  boxzentrumkiel@web.de
+                  info@kieler-bikerdays.de
                 </span>
               </a>
             </div>
