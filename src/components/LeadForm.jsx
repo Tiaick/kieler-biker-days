@@ -48,13 +48,23 @@ export default function LeadForm() {
     setStatus('sending')
 
     try {
-      const res = await fetch('/contact', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          access_key: 'b9f1e9a2-011c-43bd-a82d-88fe80e3d6ed',
+          subject: `Neue Partneranfrage: ${form.name}${form.firma ? ` (${form.firma})` : ''}`,
+          from_name: 'Kieler Biker Days Website',
+          name:      form.name,
+          email:     form.email,
+          telefon:   form.telefon,
+          firma:     form.firma,
+          teilnahme: form.teilnahme,
+          nachricht: form.nachricht,
+        }),
       })
       const json = await res.json()
-      if (json.ok) {
+      if (json.success) {
         setStatus('success')
         setForm(initialState)
       } else {
