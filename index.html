@@ -26,11 +26,14 @@
     <!-- Favicon placeholder -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏍️</text></svg>" />
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V46S643KDB"></script>
+    <!-- Google Analytics (consent-aware) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', { analytics_storage: 'denied' });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V46S643KDB"></script>
+    <script>
       gtag('js', new Date());
       gtag('config', 'G-V46S643KDB');
     </script>
