@@ -46,7 +46,7 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-biker-orange to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-8 pt-28 pb-16 md:pt-36 md:pb-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-8 pt-24 pb-14 md:pt-36 md:pb-24">
 
         {/* Event label */}
         <div

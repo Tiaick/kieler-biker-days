@@ -112,7 +112,7 @@ export default function LeadForm() {
 
       <div ref={ref} className="max-w-7xl mx-auto px-5 md:px-8 py-24 md:py-32">
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
 
           {/* Left: intro text */}
           <div className={`animate-on-enter-left ${inView ? 'in-view' : ''}`}>

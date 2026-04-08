@@ -39,7 +39,7 @@ export default function Atmosphere() {
             ref={imgRef}
             className={`relative animate-on-enter-left ${imgInView ? 'in-view' : ''}`}
           >
-            <div className="relative overflow-hidden aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5]">
+            <div className="relative overflow-hidden aspect-[3/2] sm:aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5]">
               <img
                 src={ATMOSPHERE_IMG}
                 alt="Biker auf der Straße – Atmosphäre der Kieler Biker Days"
@@ -65,7 +65,7 @@ export default function Atmosphere() {
             </div>
 
             {/* Floating badge */}
-            <div className="absolute -right-4 -top-4 bg-biker-orange text-biker-black font-condensed font-black text-xs uppercase tracking-widest px-4 py-3 rotate-3 shadow-xl z-10">
+            <div className="hidden sm:block absolute -right-2 md:-right-4 -top-2 md:-top-4 bg-biker-orange text-biker-black font-condensed font-black text-xs uppercase tracking-widest px-4 py-3 rotate-3 shadow-xl z-10">
               Kiel<br />2026
             </div>
           </div>
