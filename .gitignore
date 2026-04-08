@@ -1,5 +1,5 @@
 node_modules/
-dist/
+# dist/   ← wird jetzt eingecheckt, damit Hostinger keinen Build-Schritt braucht
 .env
 .env.local
 .DS_Store

@@ -21,6 +21,8 @@ app.use(express.json())
 // Statische React-Build-Dateien ausliefern
 app.use(express.static(join(__dirname, 'dist')))
 
+console.log('[SMTP] Host:', SMTP_HOST, '| Port:', SMTP_PORT, '| User:', SMTP_USER, '| Pass set:', !!SMTP_PASS)
+
 const transporter = nodemailer.createTransport({
   host: SMTP_HOST,
   port: SMTP_PORT,
@@ -37,14 +39,17 @@ const teilnahmeLabels = {
 }
 
 app.post('/contact', async (req, res) => {
+  console.log('[/contact] Anfrage eingegangen:', req.body)
   const { name, firma, email, telefon, teilnahme, nachricht } = req.body ?? {}
 
   if (!name?.trim() || !email?.trim() || !teilnahme?.trim()) {
+    console.warn('[/contact] Validierung fehlgeschlagen: Pflichtfelder fehlen')
     return res.status(422).json({ ok: false, error: 'Pflichtfelder fehlen' })
   }
 
   const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRe.test(email)) {
+    console.warn('[/contact] Validierung fehlgeschlagen: Ungültige E-Mail')
     return res.status(422).json({ ok: false, error: 'Ungültige E-Mail-Adresse' })
   }
 
@@ -63,6 +68,7 @@ app.post('/contact', async (req, res) => {
   ].filter(Boolean)
 
   try {
+    console.log('[/contact] Sende E-Mail via SMTP...')
     await transporter.sendMail({
       from:     MAIL_FROM,
       to:       MAIL_TO,
@@ -70,9 +76,10 @@ app.post('/contact', async (req, res) => {
       subject:  `Neue Partneranfrage: ${name}${firma ? ` (${firma})` : ''}`,
       text:     lines.join('\n'),
     })
+    console.log('[/contact] E-Mail erfolgreich gesendet')
     res.json({ ok: true })
   } catch (err) {
-    console.error('Mail error:', err.message)
+    console.error('[/contact] SMTP Fehler:', err.message, '| Code:', err.code, '| Response:', err.response)
     res.status(500).json({ ok: false, error: 'Mailversand fehlgeschlagen' })
   }
 })
