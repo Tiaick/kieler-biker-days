@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Footer() {
   const year = new Date().getFullYear()
 
@@ -95,10 +97,20 @@ export default function Footer() {
           <p className="font-condensed text-xs text-biker-steel/60 tracking-wider text-center sm:text-left">
             © {year} BoxZentrum Kiel · Kieler Biker Days 2026 · Alle Rechte vorbehalten
           </p>
-          <div className="flex items-center gap-1 text-biker-steel/40 text-xs font-condensed tracking-wider">
-            <span className="w-4 h-px bg-biker-orange/40" />
-            <span>MADE IN KIEL</span>
-            <span className="w-4 h-px bg-biker-orange/40" />
+          <div className="flex items-center gap-4">
+            <Link
+              to="/impressum"
+              className="font-condensed text-xs text-biker-steel/60 hover:text-biker-orange transition-colors duration-200 tracking-wider"
+            >
+              Impressum
+            </Link>
+            <span className="text-biker-border">|</span>
+            <Link
+              to="/datenschutz"
+              className="font-condensed text-xs text-biker-steel/60 hover:text-biker-orange transition-colors duration-200 tracking-wider"
+            >
+              Datenschutz
+            </Link>
           </div>
         </div>
       </div>

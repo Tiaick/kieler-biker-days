@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import EventIntro from './components/EventIntro'
@@ -9,8 +10,10 @@ import Sponsors from './components/Sponsors'
 import LeadForm from './components/LeadForm'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Impressum from './pages/Impressum'
+import Datenschutz from './pages/Datenschutz'
 
-export default function App() {
+function HomePage() {
   return (
     <div className="bg-biker-black font-body text-biker-white antialiased">
       <Navbar />
@@ -27,5 +30,15 @@ export default function App() {
       </main>
       <Footer />
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/impressum" element={<Impressum />} />
+      <Route path="/datenschutz" element={<Datenschutz />} />
+    </Routes>
   )
 }
