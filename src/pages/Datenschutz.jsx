@@ -147,6 +147,94 @@ export default function Datenschutz() {
             </p>
           </section>
 
+          {/* Cookies */}
+          <section>
+            <h2 className="font-condensed font-bold text-biker-white uppercase tracking-wider text-lg mb-4 pb-2 border-b border-biker-border">
+              Cookies
+            </h2>
+            <p className="text-biker-steel mb-3">
+              Unsere Website verwendet Cookies. Cookies sind kleine Textdateien, die dein Browser
+              auf deinem Endgerät speichert. Wir unterscheiden zwischen technisch notwendigen Cookies
+              (ohne Einwilligung) und Analyse-Cookies (nur mit deiner Einwilligung).
+            </p>
+            <p className="text-biker-steel">
+              Du kannst deine Einwilligung jederzeit widerrufen, indem du die Daten in deinem Browser
+              (localStorage) löschst oder uns unter{' '}
+              <a href="mailto:info@kieler-bikerdays.de" className="text-biker-orange hover:underline">
+                info@kieler-bikerdays.de
+              </a>{' '}
+              kontaktierst. Rechtsgrundlage für die Verarbeitung auf Basis deiner Einwilligung ist
+              Art. 6 Abs. 1 lit. a DSGVO.
+            </p>
+          </section>
+
+          {/* Google Analytics */}
+          <section>
+            <h2 className="font-condensed font-bold text-biker-white uppercase tracking-wider text-lg mb-4 pb-2 border-b border-biker-border">
+              Google Analytics
+            </h2>
+            <p className="text-biker-steel mb-3">
+              Diese Website nutzt Google Analytics, einen Webanalysedienst der Google Ireland Limited,
+              Gordon House, Barrow Street, Dublin 4, Irland („Google"). Google Analytics verwendet
+              Cookies, die eine Analyse der Benutzung der Website ermöglichen.
+            </p>
+            <p className="text-biker-steel mb-3">
+              Google Analytics wird auf dieser Website nur aktiviert, wenn du dem Einsatz von
+              Analyse-Cookies über unser Cookie-Banner ausdrücklich zugestimmt hast. Ohne deine
+              Einwilligung werden keine Analysedaten erhoben (Consent Mode: denied).
+            </p>
+            <p className="text-biker-steel mb-3">
+              Die durch das Cookie erzeugten Informationen über deine Nutzung dieser Website werden
+              in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.
+              Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen,
+              um deine Nutzung der Website auszuwerten und Reports über die Websiteaktivitäten
+              zusammenzustellen.
+            </p>
+            <p className="text-biker-steel mb-3">
+              Wir haben die IP-Anonymisierung aktiviert, sodass deine IP-Adresse von Google
+              innerhalb der EU bzw. des EWR vor der Übermittlung gekürzt wird.
+            </p>
+            <p className="text-biker-steel mb-3">
+              Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Du kannst deine
+              Einwilligung jederzeit widerrufen, indem du das Cookie-Banner erneut aufrufst
+              (Browserdaten löschen) oder den Google Analytics Opt-out nutzt:
+            </p>
+            <ul className="list-none space-y-1 text-biker-steel pl-4 mb-3">
+              <li className="flex items-start gap-2">
+                <span className="text-biker-orange mt-1.5 text-xs flex-shrink-0">▸</span>
+                <span>
+                  Browser-Add-on:{' '}
+                  <a
+                    href="https://tools.google.com/dlpage/gaoptout"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-biker-orange hover:underline"
+                  >
+                    tools.google.com/dlpage/gaoptout
+                  </a>
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-biker-orange mt-1.5 text-xs flex-shrink-0">▸</span>
+                <span>
+                  Datenschutzrichtlinie von Google:{' '}
+                  <a
+                    href="https://policies.google.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-biker-orange hover:underline"
+                  >
+                    policies.google.com/privacy
+                  </a>
+                </span>
+              </li>
+            </ul>
+            <p className="text-biker-steel">
+              Die Datenübertragung in die USA erfolgt auf Grundlage der Standardvertragsklauseln
+              der EU-Kommission (Art. 46 Abs. 2 lit. c DSGVO).
+            </p>
+          </section>
+
           {/* Google Maps */}
           <section>
             <h2 className="font-condensed font-bold text-biker-white uppercase tracking-wider text-lg mb-4 pb-2 border-b border-biker-border">
