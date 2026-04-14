@@ -7,6 +7,7 @@ import Highlights from './components/Highlights'
 import Atmosphere from './components/Atmosphere'
 import Location from './components/Location'
 import Sponsors from './components/Sponsors'
+import PartnerLogos from './components/PartnerLogos'
 import LeadForm from './components/LeadForm'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -26,6 +27,7 @@ function HomePage() {
         <Atmosphere />
         <Location />
         <Sponsors />
+        <PartnerLogos />
         <LeadForm />
         <Contact />
       </main>
