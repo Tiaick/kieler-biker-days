@@ -19,8 +19,10 @@ import CookieBanner from './components/CookieBanner'
 function HomePage() {
   return (
     <div className="bg-biker-black font-body text-biker-white antialiased">
-      <CancellationBanner />
-      <Navbar />
+      <div className="fixed top-0 left-0 right-0 z-50 flex flex-col">
+        <CancellationBanner />
+        <Navbar />
+      </div>
       <main>
         <Hero />
         <EventIntro />
