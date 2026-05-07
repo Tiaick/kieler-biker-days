@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import CancellationBanner from './components/CancellationBanner'
 import Hero from './components/Hero'
 import EventIntro from './components/EventIntro'
 import Dates from './components/Dates'
@@ -18,6 +19,7 @@ import CookieBanner from './components/CookieBanner'
 function HomePage() {
   return (
     <div className="bg-biker-black font-body text-biker-white antialiased">
+      <CancellationBanner />
       <Navbar />
       <main>
         <Hero />

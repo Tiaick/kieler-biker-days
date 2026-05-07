@@ -114,35 +114,25 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Subtext */}
-        <p
-          className={`mt-7 max-w-xl text-biker-chrome text-base md:text-lg leading-relaxed font-body font-light transition-all duration-700 delay-[650ms] ${
-            loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          Zwei Tage voller Bikes, Begegnungen, Musik und echter Event-Atmosphäre.
-          Motorcycles, Community, Live Tattoo, Food & Drinks – und eine Ausfahrt,
-          die du nicht vergisst. Willkommen in Kiel.
-        </p>
-
-        {/* CTA Buttons */}
+        {/* Cancellation notice */}
         <div
-          className={`mt-10 flex flex-wrap gap-4 transition-all duration-700 delay-[800ms] ${
+          className={`mt-8 max-w-2xl border-2 border-red-600 bg-red-950/60 backdrop-blur-sm px-6 py-5 transition-all duration-700 delay-[650ms] ${
             loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <button
-            onClick={() => scrollTo('event')}
-            className="btn-orange text-sm"
-          >
-            Jetzt vormerken
-          </button>
-          <button
-            onClick={() => scrollTo('sponsoren')}
-            className="btn-outline text-sm"
-          >
-            Aussteller werden
-          </button>
+          <p className="font-condensed font-bold text-red-400 text-xs uppercase tracking-[0.2em] mb-2 flex items-center gap-2">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+            </svg>
+            Wichtige Mitteilung
+          </p>
+          <p className="text-white text-base md:text-lg font-semibold leading-snug mb-1">
+            Die Veranstaltung wurde abgesagt.
+          </p>
+          <p className="text-red-200 text-sm leading-relaxed font-light">
+            Aus organisatorischen und technischen Gründen müssen wir die Kieler Biker Days 2026 leider absagen.
+            Wir danken euch für euer großes Interesse und entschuldigen uns aufrichtig.
+          </p>
         </div>
 
         {/* Scroll hint */}
