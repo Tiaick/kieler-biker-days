@@ -1,6 +1,6 @@
 export default function CancellationBanner() {
   return (
-    <div className="relative z-50 bg-red-700 border-b-2 border-red-500 overflow-hidden">
+    <div className="hidden sm:block relative z-50 bg-red-700 border-b-2 border-red-500 overflow-hidden">
       {/* Diagonal stripe texture */}
       <div
         className="absolute inset-0 opacity-10 pointer-events-none"
