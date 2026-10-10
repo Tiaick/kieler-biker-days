@@ -98,6 +98,15 @@ export default function Footer() {
             © {year} BoxZentrum Kiel · Kieler Biker Days 2026 · Alle Rechte vorbehalten
           </p>
           <div className="flex items-center gap-4">
+            <a
+              href="https://keep-it-fair.de/webseiten"
+              target="_blank"
+              rel="noopener"
+              className="font-condensed text-xs text-biker-steel/60 hover:text-biker-orange transition-colors duration-200 tracking-wider"
+            >
+              Webdesign: Keep IT Fair
+            </a>
+            <span className="text-biker-border">|</span>
             <Link
               to="/impressum"
               className="font-condensed text-xs text-biker-steel/60 hover:text-biker-orange transition-colors duration-200 tracking-wider"
