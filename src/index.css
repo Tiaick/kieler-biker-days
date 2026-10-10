@@ -53,38 +53,35 @@ body {
     font-family: 'Barlow Condensed', sans-serif;
   }
 
-  /* Entrance animations — applied when .in-view class is added */
-  .animate-on-enter {
+  /* Entrance animations — applied when .in-view class is added.
+     Der versteckte Startzustand gilt nur mit <html class="js"> (wird in index.html
+     gesetzt), damit der vorgerenderte Text ohne JavaScript sichtbar bleibt. */
+  .animate-on-enter,
+  .animate-on-enter-left,
+  .animate-on-enter-right {
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .js .animate-on-enter {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
   }
 
-  .animate-on-enter.in-view {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .animate-on-enter-left {
+  .js .animate-on-enter-left {
     opacity: 0;
     transform: translateX(-40px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
   }
 
-  .animate-on-enter-left.in-view {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .animate-on-enter-right {
+  .js .animate-on-enter-right {
     opacity: 0;
     transform: translateX(40px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
   }
 
-  .animate-on-enter-right.in-view {
+  .js .animate-on-enter.in-view,
+  .js .animate-on-enter-left.in-view,
+  .js .animate-on-enter-right.in-view {
     opacity: 1;
-    transform: translateX(0);
+    transform: translate(0, 0);
   }
 
   /* Stagger delays */

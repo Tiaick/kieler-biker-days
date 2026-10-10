@@ -157,9 +157,17 @@ export default function Impressum() {
       <div className="border-t border-biker-border">
         <div className="max-w-4xl mx-auto px-5 md:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="font-condensed text-xs text-biker-steel/60 tracking-wider">
-            © {new Date().getFullYear()} BoxZentrum Kiel · Kieler Biker Days 2026
+            © <span suppressHydrationWarning>{new Date().getFullYear()}</span> BoxZentrum Kiel · Kieler Biker Days 2026
           </p>
           <div className="flex gap-6">
+            <a
+              href="https://keep-it-fair.de/webseiten"
+              target="_blank"
+              rel="noopener"
+              className="font-condensed text-xs text-biker-steel hover:text-biker-orange transition-colors duration-200 tracking-wider"
+            >
+              Webdesign: Keep IT Fair
+            </a>
             <Link to="/impressum" className="font-condensed text-xs text-biker-orange tracking-wider">
               Impressum
             </Link>

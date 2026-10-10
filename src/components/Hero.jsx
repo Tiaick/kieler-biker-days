@@ -51,7 +51,7 @@ export default function Hero() {
         {/* Event label */}
         <div
           className={`transition-all duration-700 delay-150 ${
-            loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            loaded ? 'opacity-100 translate-y-0' : '[.js_&]:opacity-0 [.js_&]:translate-y-8'
           }`}
         >
           <span className="section-label inline-flex items-center gap-3">
@@ -64,7 +64,7 @@ export default function Hero() {
         {/* Main headline */}
         <div
           className={`mt-4 transition-all duration-700 delay-300 ${
-            loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            loaded ? 'opacity-100 translate-y-0' : '[.js_&]:opacity-0 [.js_&]:translate-y-10'
           }`}
         >
           <h1 className="font-display text-[clamp(3.5rem,12vw,9rem)] leading-[0.88] tracking-[0.03em] text-biker-white glow-orange">
@@ -80,7 +80,7 @@ export default function Hero() {
         {/* Date + Location badge */}
         <div
           className={`mt-8 flex flex-wrap gap-4 transition-all duration-700 delay-500 ${
-            loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            loaded ? 'opacity-100 translate-y-0' : '[.js_&]:opacity-0 [.js_&]:translate-y-8'
           }`}
         >
           <div className="flex items-center gap-2 bg-biker-surface/80 backdrop-blur-sm border border-biker-border px-4 py-2">
@@ -117,7 +117,7 @@ export default function Hero() {
         {/* Cancellation notice */}
         <div
           className={`mt-8 max-w-2xl border-2 border-red-600 bg-red-950/60 backdrop-blur-sm px-6 py-5 transition-all duration-700 delay-[650ms] ${
-            loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            loaded ? 'opacity-100 translate-y-0' : '[.js_&]:opacity-0 [.js_&]:translate-y-8'
           }`}
         >
           <p className="font-condensed font-bold text-red-400 text-xs uppercase tracking-[0.2em] mb-2 flex items-center gap-2">
@@ -138,7 +138,7 @@ export default function Hero() {
         {/* Scroll hint */}
         <div
           className={`mt-16 md:mt-20 transition-all duration-700 delay-[1000ms] ${
-            loaded ? 'opacity-100' : 'opacity-0'
+            loaded ? 'opacity-100' : '[.js_&]:opacity-0'
           }`}
         >
           <button

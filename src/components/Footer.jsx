@@ -95,7 +95,7 @@ export default function Footer() {
       <div className="border-t border-biker-border/50">
         <div className="max-w-7xl mx-auto px-5 md:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="font-condensed text-xs text-biker-steel/60 tracking-wider text-center sm:text-left">
-            © {year} BoxZentrum Kiel · Kieler Biker Days 2026 · Alle Rechte vorbehalten
+            © <span suppressHydrationWarning>{year}</span> BoxZentrum Kiel · Kieler Biker Days 2026 · Alle Rechte vorbehalten
           </p>
           <div className="flex items-center gap-4">
             <a

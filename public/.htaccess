@@ -1,0 +1,7 @@
+# Vorgerenderte Unterseiten (z. B. /impressum -> /impressum/index.html) ohne
+# Umleitung auf die Variante mit Schrägstrich ausliefern.
+DirectorySlash Off
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.+?)/?$ $1/index.html [L]

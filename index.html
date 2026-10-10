@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- JS-Flag: Einblend-Animationen verstecken Inhalte nur, wenn JavaScript läuft.
+         Startet die App nicht (z. B. Bundle lädt nicht), wird der Inhalt nach 4 s sichtbar. -->
+    <script>
+      document.documentElement.classList.add('js');
+      setTimeout(function () {
+        if (!window.__KBD_APP_STARTED) document.documentElement.classList.remove('js');
+      }, 4000);
+    </script>
+
     <!-- SEO -->
     <title>Kieler Biker Days 2026 – Bikes, Musik & Kultur | 30. & 31. Mai Kiel</title>
     <meta name="description" content="Bikes, Live-Acts, Tattoo-Artists & echte Biker-Kultur auf einem Platz. Das erste große Biker-Wochenende Kiels — 30.–31. Mai 2026, Tonberg 15. Eintritt frei!" />
@@ -38,7 +47,7 @@
       "description": "Zwei Tage voller Bikes, Musik, Live Tattoo, Food und echter Biker-Atmosphäre in Kiel. Eintritt frei.",
       "startDate": "2026-05-30T10:00:00+02:00",
       "endDate": "2026-05-31T22:00:00+02:00",
-      "eventStatus": "https://schema.org/EventScheduled",
+      "eventStatus": "https://schema.org/EventCancelled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "isAccessibleForFree": true,
       "location": {
@@ -96,18 +105,7 @@
     />
   </head>
   <body>
-    <!-- Statischer Inhalt für Crawler ohne JavaScript; React ersetzt ihn beim Start -->
-    <div id="root">
-      <main>
-        <h1>Kieler Biker Days 2026</h1>
-        <p><strong>Veranstaltung abgesagt:</strong> Die Kieler Biker Days 2026 (30.–31. Mai 2026, BoxZentrum Kiel, Tonberg 15, 24113 Kiel) müssen aus organisatorischen und technischen Gründen leider abgesagt werden.</p>
-        <p>Organisiert von BoxZentrum Kiel · Kontakt: <a href="mailto:info@kieler-bikerdays.de">info@kieler-bikerdays.de</a></p>
-      </main>
-      <footer>
-        <a href="https://keep-it-fair.de/webseiten">Webdesign: Keep IT Fair</a> ·
-        <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutz</a>
-      </footer>
-    </div>
+    <div id="root"><!--ssr-outlet--></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
